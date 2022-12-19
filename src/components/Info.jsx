@@ -10,7 +10,7 @@ export default function Info() {
             id: 'info1',
             icon: GoRepo,
             count: repo,
-            title: 'Repo',
+            title: 'Repos',
             color: '#DA4A91',
             bg: '#FDE0F0'
         },
@@ -40,14 +40,14 @@ export default function Info() {
         },
     ]
     return (
-        <div className="info flex item-center justify-between px-3 mt-10">
+        <div className="info grid tablet:grid-cols-2 Ptablet:grid-cols-4 laptop:grid-cols-4 mobile:grid-cols-2 smallmobile:grid-cols-2 item-center justify-between px-3 mt-12">
             {data.map((info,index) => {
                 return (
                     <div className='info-item flex items-center' key = {info+index}>
-                        <span className={`info-icon ${info.title} mr-5 text-2xl font-bold w-12 h-12 flex items-center justify-center rounded-[50%]`} ><info.icon /></span>
+                        <span className={`info-icon ${info.title} mr-5 laptop:text-2xl tablet:text-xl mobile:text-md smallmobile:text-md font-bold tablet:w-12 tablet:h-12 laptop:w-12 laptop:h-12 mobile:w-8 mobile:h-8 smallmobile:w-8 smallmobile:h-8 flex items-center justify-center rounded-[50%]`} ><info.icon /></span>
                         <div className='flex flex-col items-center justify-center'>
-                            <p className='text-[#102A42] text-3xl font-bold text-center'>{info.count}</p>
-                            <p className='text-center text-md text-gray-500 tracking-[1.5px]'>{info.title} </p>
+                            <p className='text-[#102A42] laptop:text-3xl tablet:text-3xl mobile:text-xl smallmobile:text-xl font-bold '>{info.count}</p>
+                            <p className=' laptop:text-md tablet:text-md mobile:text-sm smallmobile:text-sm text-gray-500 tracking-[1.5px]'>{info.title} </p>
                         </div>
                     </div>
                 )

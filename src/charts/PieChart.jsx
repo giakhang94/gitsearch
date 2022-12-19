@@ -1,3 +1,4 @@
+//Ghi chu: Chart the hien cac ngon ngu thuong dung nhat theo ti le % (100 repo gan nhát)
 // STEP 1 - Include Dependencies
 // Include react
 
@@ -28,8 +29,7 @@ ReactFC.fcRoot(FusionCharts, Pie2D, FusionTheme);
 // STEP 3 - Creating the JSON object to store the chart configurations
 
 // STEP 4 - Creating the DOM element to pass the react-fusioncharts component
-function BarChart()  {
-    const [chartData, setChartData] = useState({})
+function BarChart({data})  {
     const chartConfigs = {
       type: "pie2d", // The chart type
       width: "400", // Width of the chart
@@ -48,39 +48,10 @@ function BarChart()  {
             "pieRadius": "35%"
         },
         // Chart Data
-        "data": chartData
+        "data": data
       }
     };
-    const {userData} = useContext(GithubContext)
-    const reposUrl = userData.reposUrl
-
-    useEffect(()=> {
-        const fetchData = async()=> {
-            const resp = await fetch(reposUrl+'?per_page=100')
-            const respJson = await resp.json()
-            // setPieData(respJson)
-            const dataPrecent = respJson.reduce((accum, item)=>{
-                if (!item.language) return accum
-                if(!accum[item.language]) {
-                    accum[item.language] = 1
-                }else {
-                    accum[item.language] +=1
-                }
-                return accum
-
-            
-            },{})
-            // console.log(item.language)
-            const languages = Object.keys(dataPrecent)
-            const data =  []
-            languages.map(language => {
-                data.push({label: language, value: dataPrecent[language]})
-            })
-            setChartData(data)
-            console.log(data)
-        }
-        fetchData()
-    }, [reposUrl])
+   
     return (<ReactFC {...chartConfigs} />);
 }
 

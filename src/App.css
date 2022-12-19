@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.Repo {
+.Repos {
     color: #DA4A91;
     background-color: hsla(330, 66%, 57%, 0.541);
 }

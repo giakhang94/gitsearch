@@ -7,7 +7,7 @@ import Card from "./card"
 export default function User() {
     const {name, userData} = useContext(GithubContext)
     return (
-        <div className="user w-2/4 pr-12 mr-5 h-[250px]">
+        <div className="user tablet:w-full laptop:w-2/4 mobile:w-full mobile:pr-0 mobile:mr-5 smallmobile:w-full smallmobile:pr-5 smallmobile:mr-5 laptop:pr-12 laptop:mr-5 tablet:mr-5 tablet:pr-5 mobile:mb-6 smallmobile:mb-6 h-[250px]">
             <h3 className="text-gray-500 text-xl">User</h3>
             <Card userData = {userData} name = {name} isFollow />
             <h3 className="my-2 text-gray-700">{userData.bio}</h3>
