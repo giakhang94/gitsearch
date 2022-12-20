@@ -3,11 +3,11 @@ const api = 'https://api.github.com/';
 const GithubContext = createContext();
 function GitProvider({ children }) {
     const [name, setName] = useState('tao');
-    const [repo, setRepo] = useState(1);
-    const [follower, setFollower] = useState(1);
-    const [following, setFollowing] = useState(1);
+    const [repo, setRepo] = useState(8);
+    const [follower, setFollower] = useState(0);
+    const [following, setFollowing] = useState(12);
     const [isLoadingData, setIsLoadingData] = useState(false);
-    const [git, setGit] = useState(1);
+    const [git, setGit] = useState(0);
     const [followerUrl, setFollowerUrl] = useState('https://api.github.com/users/john-smilga/followers?per_page=100');
     const [userData, setUserData] = useState({
         login: 'khang-hy',
