@@ -1,6 +1,6 @@
 export default function Card({name, userData, isFollow, small}) {
     return (
-        <div className="flex items-center my-3">
+        <div className="flex items-center my-3" >
             <div className={`${!small && "w-20 h-20 min-w-[80px]" } mr-5 ${small && "w-12 h-12 min-w-[48px]"} `}>
                 <img src={userData.avtUrl} alt="" className="rounded-[50%] w-full min-w-10"  />
             </div>

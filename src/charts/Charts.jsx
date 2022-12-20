@@ -80,19 +80,19 @@ export default function Charts() {
         return (
             <div className="space-y-1">
                 <div className="flex items-center tablet:flex-col Ptablet:flex-row laptop:flex-row mobile:flex-col smallmobile:flex-col">
-                    <div className="tablet:w-full flex justify-center Ptablet:w-2/4 Ptablet:max-w-[400px] tablet:max-w-[400px] laptop:max-w-[600px] laptop:w-2/4 mobile:w-full mobile:max-w-[300px] smallmobile:w-full smallmobile:max-w-[280px]">
+                    <div className="tablet:w-full flex justify-center Ptablet:w-2/4 Ptablet:max-w-[400px] tablet:max-w-[400px] laptop:max-w-[600px] laptop:w-2/4 mobile:w-full mobile:max-w-[300px] smallmobile:w-auto">
                         <PieChart data = {data.pieData}/>
                     </div>
-                    <div className="tablet:w-full  flex justify-center Ptablet:w-2/4 Ptablet:max-w-[400px] tablet:max-w-[400px] laptop:max-w-[600px] laptop:w-2/4 mobile:w-full mobile:max-w-[300px] smallmobile:w-full smallmobile:max-w-[280px]">
+                    <div className="tablet:w-full  flex justify-center Ptablet:w-2/4 Ptablet:max-w-[400px] tablet:max-w-[400px] laptop:max-w-[600px] laptop:w-2/4 mobile:w-full mobile:max-w-[300px] smallmobile:w-auto">
                         <RepoForkChart data = {data.top5Forks}/>
                     </div>
                 </div>
                 <div className="block py-5"></div>
                 <div className="flex items-center tablet:flex-col Ptablet:flex-row laptop:flex-row mobile:flex-col smallmobile:flex-col">
-                    <div className="tablet:w-full flex justify-center Ptablet:w-2/4 Ptablet:max-w-[400px] tablet:max-w-[400px] laptop:max-w-[600px] laptop:w-2/4 mobile:w-full mobile:max-w-[300px] smallmobile:w-full smallmobile:max-w-[280px]">
+                    <div className="tablet:w-full flex justify-center Ptablet:w-2/4 Ptablet:max-w-[400px] tablet:max-w-[400px] laptop:max-w-[600px] laptop:w-2/4 mobile:w-full mobile:max-w-[300px] smallmobile:w-auto">
                         <StarByLanguage data = {data.starsByLang}/>
                     </div>
-                    <div className="tablet:w-full flex justify-center Ptablet:w-2/4 Ptablet:max-w-[400px] tablet:max-w-[400px] laptop:max-w-[600px] laptop:w-2/4 mobile:w-full smallmobile:w-full smallmobile:max-w-[300px]">
+                    <div className="tablet:w-full flex justify-center Ptablet:w-2/4 Ptablet:max-w-[400px] tablet:max-w-[400px] laptop:max-w-[600px] laptop:w-2/4 mobile:w-full smallmobile:w-auto">
                         <StarsByRepoBarChart data = {data.top5Stars}/>
                     </div>
                 </div>

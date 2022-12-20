@@ -16,9 +16,6 @@ import Pie2D from "fusioncharts/fusioncharts.charts";
 
 // Include the theme as fusion
 import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
-import { useContext } from "react";
-import { GithubContext } from "../Context/GitContext";
-import { useEffect } from "react";
 
 // Adding the chart and theme as dependency to the core fusioncharts
 ReactFC.fcRoot(FusionCharts, Pie2D, FusionTheme);
@@ -32,7 +29,7 @@ ReactFC.fcRoot(FusionCharts, Pie2D, FusionTheme);
 function BarChart({data})  {
     const chartConfigs = {
       type: "pie2d", // The chart type
-      width: "400", // Width of the chart
+      width: "100%", // Width of the chart
       height: "400", // Height of the chart
       dataFormat: "json", // Data type
       dataSource: {
