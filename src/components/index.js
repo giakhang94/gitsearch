@@ -5,4 +5,5 @@ import Follower from './follower';
 import Card from './card';
 import Navbar from './navbar';
 import Loading from './loading';
-export { Search, User, Info, Follower, Card, Navbar, Loading };
+import Footer from './footer';
+export { Search, User, Info, Follower, Card, Navbar, Loading, Footer };

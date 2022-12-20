@@ -1,6 +1,6 @@
 
 import Charts from '../charts/Charts'
-import {Search, User, Info, Follower, Navbar} from '../components'
+import {Search, User, Info, Follower, Navbar, Footer} from '../components'
 function Home() {
     return (
         <div className="home dashboard laptop:px-20 tablet:px-20 mobile:px-5 smallmobile:px-3">
@@ -12,6 +12,7 @@ function Home() {
                 <Follower />
             </div>
             <Charts />
+            <Footer />
         </div>
     ) 
 }

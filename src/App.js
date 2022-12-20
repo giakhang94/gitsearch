@@ -5,10 +5,16 @@ import { useAuth0 } from '@auth0/auth0-react';
 import { useContext } from 'react';
 import { GithubContext } from './Context/GitContext';
 import { Loading } from './components';
+import { useState } from 'react';
+import { useEffect } from 'react';
 function App() {
-    const isLoading = useContext(GithubContext);
-    const { isAuthenticated } = useAuth0();
-    if (isLoading === true) {
+    const [loadingData, setLoadingData] = useState(false);
+    const { isLoadingData } = useContext(GithubContext);
+    useEffect(() => {
+        setLoadingData(isLoadingData);
+    }, [isLoadingData]);
+    const { isAuthenticated, isLoading } = useAuth0();
+    if (isLoading || loadingData) {
         return <Loading />;
     } else {
         return (

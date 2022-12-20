@@ -6,7 +6,7 @@ function GitProvider({ children }) {
     const [repo, setRepo] = useState(1);
     const [follower, setFollower] = useState(1);
     const [following, setFollowing] = useState(1);
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoadingData, setIsLoadingData] = useState(false);
     const [git, setGit] = useState(1);
     const [followerUrl, setFollowerUrl] = useState('https://api.github.com/users/john-smilga/followers?per_page=100');
     const [userData, setUserData] = useState({
@@ -20,6 +20,7 @@ function GitProvider({ children }) {
     });
     async function gitSearch(user) {
         try {
+            setIsLoadingData(true);
             const res = await fetch(api + 'users/' + user);
             if (res) {
                 const resData = await res.json();
@@ -42,7 +43,7 @@ function GitProvider({ children }) {
                 const reposUrl = resData.repos_url;
                 setUserData({ login, bio, blog, company, location, avtUrl, reposUrl });
                 setFollowerUrl(resData.followers_url);
-                setIsLoading(false);
+                setIsLoadingData(false);
             }
         } catch (e) {
             console.log(e);
@@ -59,7 +60,7 @@ function GitProvider({ children }) {
                 git,
                 userData,
                 followerUrl,
-                isLoading,
+                isLoadingData,
             }}
         >
             {children}
