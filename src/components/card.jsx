@@ -11,7 +11,7 @@ export default function Card({name, userData, isFollow, small}) {
                     {isFollow && '@' + userData.login}
                     </span>
             </div>
-            {isFollow&&<button className="hover:bg-[#2CAEBA] hover:text-white bg-none py-1 px-4 border border-[#2CAEBA] text-[#2CAEBA] rounded-3xl tracking-[1.5px]">Follow</button>}
+            {isFollow&&<a href = {userData.html_url} className="hover:bg-[#2CAEBA] hover:text-white bg-none py-1 px-4 border border-[#2CAEBA] text-[#2CAEBA] rounded-3xl tracking-[1.5px]">Follow</a>}
     </div>
     )
 }

@@ -11,6 +11,7 @@ function GitProvider({ children }) {
     const [followerUrl, setFollowerUrl] = useState('https://api.github.com/users/john-smilga/followers?per_page=100');
     const [userData, setUserData] = useState({
         login: 'khang-hy',
+        html_url: 'https://github.com/giakhang94',
         bio: 'Ai Tan Giac La Huyen Diep',
         blog: 'macrowl.com',
         company: 'Tao',
@@ -41,7 +42,8 @@ function GitProvider({ children }) {
                 const location = resData.location;
                 const avtUrl = resData.avatar_url;
                 const reposUrl = resData.repos_url;
-                setUserData({ login, bio, blog, company, location, avtUrl, reposUrl });
+                const html_url = resData.html_url;
+                setUserData({ login, bio, blog, company, location, avtUrl, reposUrl, html_url });
                 setFollowerUrl(resData.followers_url);
                 setIsLoadingData(false);
             }
