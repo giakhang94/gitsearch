@@ -23,7 +23,7 @@ function App() {
                     <div className="App">
                         <Routes>
                             <Route path="/" element={<Outlet />}>
-                                <Route path="/" element={isAuthenticated ? <Home /> : <Welcome />} />
+                                <Route path="/" element={1 ? <Home /> : <Welcome />} />
                             </Route>
                             <Route path="/home" element={<Home />} />
                             <Route path="/login" element={<Welcome />} />

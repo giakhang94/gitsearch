@@ -28,7 +28,7 @@ ReactFC.fcRoot(FusionCharts, Column2D, FusionTheme);
 function StarsBarChart ({data}) {
   const chartConfigs = {
     type: "bar2d", // The chart type
-    // width: "600", // Width of the chart
+    width: "100%", // Width of the chart
     height: "400", // Height of the chart
     dataFormat: "json", // Data type
     dataSource: {

@@ -18,3 +18,10 @@
     color:#F0B429;
     background-color: #f0b42988;
 }
+/* css for charts */
+.fusioncharts-container{
+    width: 100% !important
+}
+.fusioncharts-container svg {
+    width: 100% !important
+}
