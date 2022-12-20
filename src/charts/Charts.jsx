@@ -92,7 +92,7 @@ export default function Charts() {
                     <div className="tablet:w-full flex justify-center Ptablet:w-2/4 Ptablet:max-w-[400px] tablet:max-w-[400px] laptop:max-w-[600px] laptop:w-2/4 mobile:w-full mobile:max-w-[300px] smallmobile:w-full smallmobile:max-w-[280px]">
                         <StarByLanguage data = {data.starsByLang}/>
                     </div>
-                    <div className="tablet:w-full flex justify-center Ptablet:w-2/4 Ptablet:max-w-[400px] tablet:max-w-[400px] laptop:max-w-[600px] laptop:w-2/4 mobile:w-full mobile:max-w-[300px] smallmobile:w-full smallmobile:max-w-[280px]">
+                    <div className="tablet:w-full flex justify-center Ptablet:w-2/4 Ptablet:max-w-[400px] tablet:max-w-[400px] laptop:max-w-[600px] laptop:w-2/4 mobile:w-full mobile:max-w-[280px] smallmobile:w-full smallmobile:max-w-[250px]">
                         <StarsByRepoBarChart data = {data.top5Stars}/>
                     </div>
                 </div>
